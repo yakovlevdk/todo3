@@ -8,7 +8,7 @@ export const handleSearch = (
 
 const searchData = (searchText, setIsSearching, setFoundedItems, todos) => {
   setIsSearching(true);
-  const items = Object.entries(todos).filter(([todo]) =>
+  const items = Object.entries(todos).filter(([id, todo]) =>
     todo.title.includes(searchText)
   );
   setFoundedItems(items);
